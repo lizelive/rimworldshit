@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+  <Operation Class="PatchOperationInsert">
+    <xpath>//fuelFilter/thingDefs/li[text()="WoodLog"]</xpath>
+    <value>
+      <li>DungLog</li>
+    </value>
+  </Operation>
   <!-- <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName = "CraftingSpot" or defName = "ElectricStove" or defName = "FueledStove"]/recipes</xpath>
     <value>
