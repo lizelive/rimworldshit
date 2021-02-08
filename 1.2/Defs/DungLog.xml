@@ -34,7 +34,7 @@
         <li>Woody</li>
       </categories>
       <commonality>1.00</commonality>
-      <color>(196,141,113)</color>
+      <color>(196,141,91)</color>
       <constructEffect>ConstructWood</constructEffect>
       <appearance>Planks</appearance>
       <soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
