@@ -11,33 +11,24 @@
       </li>
     </stages>
   </ThoughtDef>
-  <RecipeDef ParentName="CookMealBase">
-    <defName>Make_Cowpie</defName>
-    <label>cook a cowpie</label>
-    <description>Cook a cowpie.</description>
-    <jobString>Cooking cowpie.</jobString>
-    <workSpeedStat>CookSpeed</workSpeedStat>
-    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
-    <effectWorking>Cook</effectWorking>
-    <soundWorking>Recipe_CookMeal</soundWorking>
-    <allowMixingIngredients>true</allowMixingIngredients>
-    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>Waste</li>
-          </categories>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <products>
-      <Cowpie>1</Cowpie>
-    </products>
-    <workSkill>Cooking</workSkill>
-  </RecipeDef>
-  <ThingDef ParentName="MealBase">
+  <ThingDef>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>25</stackLimit>
+    <tickerType>Rare</tickerType>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <thingCategories>
+      <li>FoodMeals</li>
+    </thingCategories>
+    <alwaysHaulable>true</alwaysHaulable>
+    <pathCost>14</pathCost>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <uiIconForStackCount>1</uiIconForStackCount>
     <defName>Cowpie</defName>
     <label>cowpie</label>
     <description>why are you eating this?</description>
@@ -46,11 +37,18 @@
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-5</Beauty>
+      <Mass>0.44</Mass>
+      <DeteriorationRate>10</DeteriorationRate>
       <MarketValue>-10</MarketValue>
       <Nutrition>0.9</Nutrition>
       <FoodPoisonChanceFixedHuman>0.5</FoodPoisonChanceFixedHuman>
     </statBases>
     <ingestible>
+      <foodType>Meal</foodType>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
       <preferability>MealAwful</preferability>
       <tasteThought>AteShit</tasteThought>
       <ingestEffect>EatVegetarian</ingestEffect>
@@ -58,12 +56,53 @@
       <optimalityOffsetHumanlikes>-30</optimalityOffsetHumanlikes>
     </ingestible>
     <tradeability>Sellable</tradeability>
-    <burnableByRecipe>true</burnableByRecipe>
+    <!-- <burnableByRecipe>true</burnableByRecipe> -->
+    <!-- <stuffCategories>
+      <li>Woody</li>
+    </stuffCategories> -->
     <comps>
+      <li Class="CompProperties_Forbiddable" />
       <li Class="CompProperties_Rottable">
-        <daysToRotStart>3</daysToRotStart>  <!-- short rot time, you want to make them as needed not store them -->
-        <rotDestroys>false</rotDestroys> <!--Can't get rid of this that easily-->
+        <daysToRotStart>3</daysToRotStart>        <!-- short rot time, you want to make them as needed not store them -->
+        <rotDestroys>false</rotDestroys>        <!--Can't get rid of this that easily-->
       </li>
+      <li Class="CompProperties_FoodPoisonable" />
     </comps>
   </ThingDef>
+  <RecipeDef>
+    <defName>Make_Cowpie</defName>
+    <label>cook a cowpie</label>
+    <description>Cook a cowpie.</description>
+    <jobString>Cooking cowpie.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <workAmount>300</workAmount>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+      <li>CraftingSpot</li>
+    </recipeUsers>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FecalSludge</li>
+          </thingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FecalSludge</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Cowpie>1</Cowpie>
+    </products>
+  </RecipeDef>
 </Defs>

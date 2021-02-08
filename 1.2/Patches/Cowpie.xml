@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <Operation Class="PatchOperationInsert">
-    <xpath>*/ThingDef[defName = "CraftingSpot"]/recipes</xpath>
-    <value>
-      <li>Make_Cowpie</li>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationInsert">
-    <xpath>*/ThingDef[defName = "ElectricStove"]/recipes</xpath>
-    <value>
-      <li>Make_Cowpie</li>
-    </value>
-  </Operation>
-    <Operation Class="PatchOperationInsert">
-    <xpath>*/ThingDef[defName = "FueledStove"]/recipes</xpath>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "CraftingSpot" or defName = "ElectricStove" or defName = "FueledStove"]/recipes</xpath>
     <value>
       <li>Make_Cowpie</li>
     </value>
