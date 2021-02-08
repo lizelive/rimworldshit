@@ -83,7 +83,6 @@
       <li>Campfire</li>
       <li>ElectricStove</li>
       <li>FueledStove</li>
-      <li>CraftingSpot</li>
     </recipeUsers>
     <workSkill>Cooking</workSkill>
     <ingredients>
@@ -93,7 +92,7 @@
             <li>FecalSludge</li>
           </thingDefs>
         </filter>
-        <count>75</count>
+        <count>5</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>

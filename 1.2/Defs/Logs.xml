@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>Make_Log</defName>
+    <label>make a log</label>
+    <description>Make a log.</description>
+    <jobString>Making logs.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <workAmount>300</workAmount><!--a crapy source of power-->
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <workSkill>Cooking</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FecalSludge</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FecalSludge</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <WoodLog>1</WoodLog>
+    </products>
+  </RecipeDef>
+</Defs>
