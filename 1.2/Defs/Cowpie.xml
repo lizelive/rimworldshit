@@ -33,7 +33,7 @@
     <label>cowpie</label>
     <description>why are you eating this?</description>
     <graphicData>
-      <texPath>US/Things/Items/Meal</texPath>
+      <texPath>Things/Items/Meal</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <statBases>

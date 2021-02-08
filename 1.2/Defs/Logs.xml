@@ -5,7 +5,7 @@
     <label>dung</label>
     <description>Dried dung tube.</description>
     <graphicData>
-      <texPath>US/Things/Item/Resource/DungLog</texPath>
+      <texPath>Things/Item/Resource/DungLog</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <equippedAngleOffset>-20</equippedAngleOffset>
