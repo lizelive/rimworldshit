@@ -57,9 +57,6 @@
     </ingestible>
     <tradeability>Sellable</tradeability>
     <!-- <burnableByRecipe>true</burnableByRecipe> -->
-    <!-- <stuffCategories>
-      <li>Woody</li>
-    </stuffCategories> -->
     <comps>
       <li Class="CompProperties_Forbiddable" />
       <li Class="CompProperties_Rottable">
