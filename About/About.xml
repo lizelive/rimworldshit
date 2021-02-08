@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+	<name>Useful Shit</name>
+	<author>LizeLive</author>
+	<url>https://github.com/lizelive/rimworldshit</url>
+	<supportedVersions>
+		<li>1.2</li>
+	</supportedVersions>
+	<packageId>LizeLive.UsefulShit</packageId>
+	<description>Allows you to reprocess shit into useful stuff.</description>
+</ModMetaData>

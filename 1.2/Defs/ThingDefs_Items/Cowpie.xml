@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>AteShit</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate shit</label>
+        <description>Starving would be preferable.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <RecipeDef ParentName="CookMealBase">
+    <defName>Make_Cowpie</defName>
+    <label>cook a cowpie</label>
+    <description>Cook a cowpie.</description>
+    <jobString>Cooking cowpie.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Waste</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <Cowpie>1</Cowpie>
+    </products>
+    <workSkill>Cooking</workSkill>
+  </RecipeDef>
+  <ThingDef ParentName="MealBase">
+    <defName>Cowpie</defName>
+    <label>cowpie</label>
+    <description>why are you eating this?</description>
+    <graphicData>
+      <texPath>US/Things/Items/Meal</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>-10</MarketValue>
+      <Nutrition>0.9</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.5</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <ingestible>
+      <preferability>MealAwful</preferability>
+      <tasteThought>AteShit</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>-30</optimalityOffsetHumanlikes>
+    </ingestible>
+    <tradeability>Sellable</tradeability>
+    <burnableByRecipe>true</burnableByRecipe>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>3</daysToRotStart>  <!-- short rot time, you want to make them as needed not store them -->
+        <rotDestroys>false</rotDestroys> <!--Can't get rid of this that easily-->
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>
