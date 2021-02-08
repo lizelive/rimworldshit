@@ -24,6 +24,7 @@
       <StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
       <SharpDamageMultiplier>0.40</SharpDamageMultiplier>
       <BluntDamageMultiplier>0.9</BluntDamageMultiplier>
+      <Cleanliness>-10</Cleanliness>
     </statBases>
     <burnableByRecipe>true</burnableByRecipe>
     <healthAffectsPrice>false</healthAffectsPrice>
@@ -42,10 +43,10 @@
       <soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
       <statFactors>
         <MaxHitPoints>0.65</MaxHitPoints>
-        <Beauty>1</Beauty>
+        <Beauty>0.1</Beauty>
         <Flammability>1</Flammability>
-        <WorkToMake>0.7</WorkToMake>
-        <WorkToBuild>0.7</WorkToBuild>
+        <WorkToMake>0.1</WorkToMake>
+        <WorkToBuild>0.1</WorkToBuild>
         <DoorOpenSpeed>1.2</DoorOpenSpeed>
       </statFactors>
     </stuffProps>
@@ -101,7 +102,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <DungLog>1</DungLog>
+      <DungLog>2</DungLog>
     </products>
   </RecipeDef>
 </Defs>
